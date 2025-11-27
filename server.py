@@ -6,9 +6,12 @@ from pyvi.ViTokenizer import tokenize
 import uvicorn
 import os
 
-# ================== KHỞI TẠO MODEL ==================
-device = "cuda" if torch.cuda.is_available() else "cpu"
-model = SentenceTransformer("dangvantuan/vietnamese-embedding").to(device)
+# ================== KHỞI TẠO MODEL NHẸ ==================
+# Bắt buộc CPU để chạy ổn định trên Railway Free
+device = "cpu"
+
+# Model nhẹ hơn (khoảng <200MB)
+model = SentenceTransformer("keepitreal/vietnamese-sbert").to(device)
 
 # Dataset ngành học
 majors = {
@@ -25,6 +28,7 @@ emb_majors = model.encode(major_sentences, convert_to_tensor=True, device=device
 
 # ================== API ==================
 app = FastAPI()
+
 class UserInput(BaseModel):
     text: str
 
