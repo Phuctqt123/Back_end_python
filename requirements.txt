@@ -2,5 +2,5 @@ fastapi
 uvicorn
 pyvi
 sentence-transformers
-torch==2.2.2+cpu
+torch==2.2.2
 numpy<2
