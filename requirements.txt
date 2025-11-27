@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+torch
+sentence-transformers
+pyvi
+numpy
+scipy
