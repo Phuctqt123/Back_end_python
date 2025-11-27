@@ -8,7 +8,7 @@ import os
 
 # ================== KHỞI TẠO MODEL ==================
 device = "cuda" if torch.cuda.is_available() else "cpu"
-model = SentenceTransformer("dangvantuan/vietnamese-embedding").to(device)
+model = SentenceTransformer("VoVanPhuc/sup-SimCSE-VietNamese-phobert-base")
 
 # Dataset ngành học
 majors = {
