@@ -2,5 +2,10 @@ fastapi
 uvicorn
 sentence-transformers
 pyvi
+
+# Fix lỗi NumPy incompatible
+numpy<2
+
+# Torch CPU nhẹ cho Railway
 torch==2.2.2+cpu
 --extra-index-url https://download.pytorch.org/whl/cpu
