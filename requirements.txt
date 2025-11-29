@@ -1,12 +1,5 @@
 fastapi
 uvicorn[standard]
-gunicorn
-
-# DÙNG ĐÚNG PHIÊN BẢN NÀY - CHẠY 100% TRÊN RAILWAY
-torch==2.4.1 --index-url https://download.pytorch.org/whl/cpu
-torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cpu
-torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cpu
-
+torch==2.3.0
 sentence-transformers
 pyvi
-VnCoreNLP
