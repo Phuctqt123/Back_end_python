@@ -11,7 +11,7 @@ app = FastAPI(title="Gợi ý ngành học theo sở thích")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using device: {device}")
 
-model = SentenceTransformer("dangvantuan/vietnamese-embedding")
+model = SentenceTransformer("hiieu/halong_embedding")
 model = model.to(device)
 
 # Dataset ngành học
